@@ -15,6 +15,7 @@ Containers and virtual machines are both technologies used to isolate applicatio
 3. Security: VMs provide a higher level of security as each VM has its own operating system and can be isolated from the host and other VMs. Containers provide less isolation, as they share the host operating system.
 Management: Managing containers is typically easier than managing VMs, as containers are designed to be lightweight and fast-moving.
 **Why are containers light weight ?**
+
 Containers are lightweight because they use a technology called containerization, which allows them to share the host operating system's kernel and libraries, while still providing isolation for the application and its dependencies. This results in a smaller footprint compared to traditional virtual machines, as the containers do not need to include a full operating system. Additionally, Docker containers are designed to be minimal, only including what is necessary for the application to run, further reducing their size.
 
 Let's try to understand this with an example:
@@ -23,6 +24,7 @@ Below is the screenshot of official ubuntu base image which you can use for your
 <img width="633" height="272" alt="image" src="https://github.com/user-attachments/assets/8dbd2a79-7f3f-4d22-9985-e2b1feecb351" />
 To provide a better picture of files and folders that containers base images have and files and folders that containers use from host operating system (not 100 percent accurate -> varies from base image to base image). Refer below.
 **Files and Folders in containers base images**
+   
     /bin: contains binary executable files, such as the ls, cp, and ps commands.
 
     /sbin: contains system binary executable files, such as the init and shutdown commands.
@@ -37,6 +39,7 @@ To provide a better picture of files and folders that containers base images hav
 
     /root: is the home directory of the root user.
 **Files and Folders that containers use from host operating system**
+    
     The host's file system: Docker containers can access the host file system using bind mounts, which allow the container to read and write files in the host file system.
 
     Networking stack: The host's networking stack is used to provide network connectivity to the container. Docker containers can be connected to the host's network directly or through a virtual network.
